@@ -35,11 +35,32 @@ namespace Client_UDP_IP
 
                 //on à récuperer l'heure exacte dans trame
                 socket.ReceiveFrom(trame, ref ServRemote);
+
+                //on détruit le socket
+                socket.Shutdown(SocketShutdown.Both);
+                socket.Close();
             }
             catch (Exception e)
             {
                 Console.WriteLine("Erreur socket : "+e.Message);
+                Console.ReadKey();
             }
+
+            //Mise sous forme ordinateur du nb de sec dans TT
+            Array.Reverse(trame, 40, 4);
+
+            //on decode les secondes donc on se place au 40eme octet de notre tableau
+            uint nbsec = BitConverter.ToUInt32(trame, 40);
+
+            Console.WriteLine("Nb secondes écoulé depuis 1900 et des brouettes: {0}", nbsec);
+
+            DateTime date = new DateTime(1900, 1, 1);
+
+            date = date.AddSeconds(nbsec);
+
+            date = date.ToLocalTime();
+
+            Console.WriteLine("on est le : {0}", date);
             
             Console.ReadKey(); //pause ecran
         }
