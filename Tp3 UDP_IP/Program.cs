@@ -61,6 +61,8 @@ namespace Client_UDP_IP
             date = date.ToLocalTime();
 
             Console.WriteLine("on est le : {0}", date);
+
+            Console.WriteLine("Le serveur: {0}",Serv.ToString());
             
             Console.ReadKey(); //pause ecran
         }
