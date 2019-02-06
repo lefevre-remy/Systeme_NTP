@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tp3 UDP_IP", "Tp3 UDP_IP\Tp3 UDP_IP.csproj", "{C1FEBE67-5476-49A2-8205-5FBFA9183590}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client_UDP_IP", "Tp3 UDP_IP\Client_UDP_IP.csproj", "{C1FEBE67-5476-49A2-8205-5FBFA9183590}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
